@@ -1,0 +1,23 @@
+{
+  "name": "polishwordfamilies",
+  "version": "1.0.0",
+  "description": "[ENG] This project contains really really small server written with Node.js and Express. It provides whole families of words for Polish language.\\ [PL]  Ten projekt to bardzo mały serwerek napisany w Node.js z użyciem Express. Podaje on całe rodziny słów dla języka polskiego.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ptimulka/polishwordfamilies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ptimulka/polishwordfamilies/issues"
+  },
+  "homepage": "https://github.com/Ptimulka/polishwordfamilies#readme"
+}
