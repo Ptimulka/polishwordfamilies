@@ -1,6 +1,8 @@
 var express = require("express");
 var app = express();
 
+const PORT = process.env.PORT || 3000
+
 var dict = require("./assets/searchDict.json");
 
 function searchWord(word) {
@@ -42,6 +44,6 @@ app.use(function(req, res) {
   res.status(404).json({ error: "404: Page not Found"});
 });
 
-app.listen(3000, () => {
- console.log("Server running on port 3000");
+app.listen(PORT, () => {
+  console.log(`Listening on ${ PORT }`)
 });
