@@ -1,16 +1,17 @@
 # polishwordfamilies
 
-[ENG] This project contains really really small server written with Node.js and Express. It provides whole families of words for Polish language. 
+[ENG] This project contains really really small server written with Node.js and Express. It provides whole families of words for Polish language.\
 [PL]  Ten projekt to bardzo mały serwerek napisany w Node.js z użyciem Express. Podaje on całe rodziny słów dla języka polskiego.
 
-[ENG] For example for below GET request:
+
+[ENG] For example for below GET request:\
 [PL]  Na przykład dla poniższego zapytania GET:
 
 ```
 http://localhost:3000/wordfamilies/gra
 ```
 
-[ENG] The answer is:
+[ENG] The answer is:\
 [PL]  Odpowiedź to:
 
 ```json
@@ -110,19 +111,21 @@ http://localhost:3000/wordfamilies/gra
 } 
 ```
 
-[ENG] The array for element "gra" contains two objects (two word families), because word "gra" is both noun and verb in Polish (verb "grać" in different form).
+[ENG] The array for element "gra" contains two objects (two word families), because word "gra" is both noun and verb in Polish (verb "grać" in different form).\
 [PL]  Tablica dla elementu "gra" zawiera dwa obiekty (dwie rodziny słów), ponieważ słowo "gra" to po polsku zarówno rzeczownik jak i czasownik, ale w innej formie (np. "chłopiec gra na gitarze").
 
-[ENG] Each of these objects has "prefix" and "suffices" elements. First is common prefix for all words in this family and second is array of possible suffices.
+
+[ENG] Each of these objects has "prefix" and "suffices" elements. First is common prefix for all words in this family and second is array of possible suffices.\
 [PL]  Każdy z tych obiektów zawiera element "prefix" (przedrostek) i element "suffices" (przyrostki). Pierwszy to wspólny przedrostek dla wszystkich słów z danej rodziny, drugi to tablica możliwych zakończeń.
 
-[ENG] For example for second family in above example all possible words are: 
+
+[ENG] For example for second family in above example all possible words are: \
 [PL]  Na przykład dla drugiej rodziny w powyższym przykładzie wszystkie możliwe słowa to:
 
 "gra", "gier", "grach", "grami", "grą","grę","gro","grom","gry","grze"
 
 
-[ENG] It is also possible to separate words with comma in request url. Then the root dictionary in server's answer contains many elements. Words in request can also be in different forms.
+[ENG] It is also possible to separate words with comma in request url. Then the root dictionary in server's answer contains many elements. Words in request can also be in different forms.\
 [PL]  Można również oddzielic słowa przecinkiem w zapytaniu. Wtedy korzeń odpowiedzi serwera zawiera kilka elementów. Słowa w zapytaniu mogą mieć różne formy.
 
 ```
@@ -168,7 +171,7 @@ http://localhost:3000/wordfamilies/lampie,kanapy
 }
 ```
 
-[ENG] You can also ask for people names, surnames and other proper names. However they will be lowercased in the answer.
+[ENG] You can also ask for people names, surnames and other proper names. However they will be lowercased in the answer.\
 [PL]  Możesz pytać również o imiona, nazwiska i inne nazwy własne. Będą one jednak pisane małymi literami w odpowiedzi.
 
 ```
@@ -228,7 +231,7 @@ http://localhost:3000/wordfamilies/Adam,Nowak,Wenecja
 }
 ```
 
-[ENG] Polish letters of course can also be used (they might be encoded)
+[ENG] Polish letters of course can also be used (they might be encoded)\
 [PL]  Polskie litery diakrytyczne oczywiście także mogą być użyte (można je zakodować)
 
 ```
@@ -257,7 +260,7 @@ http://localhost:3000/wordfamilies/ma%C5%82pa
 }
 ```
 
-[ENG] If given word doesn't exist in server's dictionary or it is the only word in the family, the answer contains one family object with prefix equal to the word and with empty suffices array.
+[ENG] If given word doesn't exist in server's dictionary or it is the only word in the family, the answer contains one family object with prefix equal to the word and with empty suffices array.\
 [PL]  Jesli dane słowo nie istnieje w słowniku serwera albo jest ono jedynym słowem w rodzinie, wtedy odpowiedź serwera zawiera jeden obiekt rodziny z przedrostkiem równym słowu oraz z pustą tablicą przyrostków.
 
 ```
