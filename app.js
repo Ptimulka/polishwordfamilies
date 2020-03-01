@@ -28,10 +28,14 @@ function searchWord(word) {
     }
   }
 
-app.get("/wordfamilies/:word", (req, res, next) => {
-    let word = req.params.word.toLowerCase();
-    let ret = searchWord(word);
-    res.json({ word: word, families: ret });
+app.get("/wordfamilies/:word", (req, res, next) => {    
+    let ret = {}
+    let param = req.params.word.toLowerCase();
+    let words = param.split(',');
+    words.forEach(word => { 
+        ret[word] = searchWord(word);
+    })
+    res.json(ret);   
 });
 
 app.use(function(req, res) {
