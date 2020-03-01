@@ -4,6 +4,7 @@
   "description": "[ENG] This project contains really really small server written with Node.js and Express. It provides whole families of words for Polish language.\\ [PL]  Ten projekt to bardzo mały serwerek napisany w Node.js z użyciem Express. Podaje on całe rodziny słów dla języka polskiego.",
   "main": "app.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {},
