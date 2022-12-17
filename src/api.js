@@ -1,8 +1,7 @@
-var express = require("express");
-var cors = require('cors');
-var app = express();
-
-const PORT = process.env.PORT || 3000
+const express = require("express");
+const serverless = require("serverless-http");
+const cors = require('cors');
+const app = express();
 
 var dict = require("./assets/searchDict.json");
 
@@ -33,7 +32,10 @@ function searchWord(word) {
 
 app.use(cors());
 
-app.get("/wordfamilies/:word", (req, res, next) => {    
+const router = express.Router();
+
+
+router.get("/wordfamilies/:word", (req, res, next) => {    
     let ret = {}
     let param = req.params.word.toLowerCase();
     let words = param.split(',');
@@ -43,10 +45,10 @@ app.get("/wordfamilies/:word", (req, res, next) => {
     res.json(ret);   
 });
 
-app.use(function(req, res) {
+router.use(function(req, res) {
   res.status(404).json({ error: "404: Page not Found"});
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on ${ PORT }`)
-});
+app.use("/.netlify/functions/api", router);
+
+module.exports.handler = serverless(app);
