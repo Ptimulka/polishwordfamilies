@@ -1,14 +1,29 @@
 # polishwordfamilies
+[ENG] This project is really small serverless app written with Node.js, Express, serverless-http and netlify-lambda. It provides whole families of words for Polish language.\
+[PL]  Ten projekt to bardzo mała aplikacja serverless napisana w Node.js z użyciem Express serverless-http and netlify-lambda. Podaje całe rodziny słów dla języka polskiego.
 
-[ENG] This project contains really really small server written with Node.js and Express. It provides whole families of words for Polish language.\
-[PL]  Ten projekt to bardzo mały serwerek napisany w Node.js z użyciem Express. Podaje on całe rodziny słów dla języka polskiego.
+[ENG] You can check under below link: 
+[PL] Możesz sprawdzić działanie aplikacji pod poniższym linkiem:
 
+https://polishwordfamilies.netlify.app/.netlify/functions/api/wordfamilies/
+
+[ENG] or you can start application locally by running:
+[PL] albo uruchomić aplikację lokalnie:
+
+`npm start`
+
+[ENG] WHen deploying app to netlify set like below:
+[PL] Deplojując apkę na netlify ustaw jak poniżej:
+
+Build command `npm run build`
+Publish directory `dist`
 
 [ENG] For example for below GET request:\
-[PL]  Na przykład dla poniższego zapytania GET:
+[PL] Na przykład dla poniższego zapytania GET:
 
 ```
-http://localhost:3000/wordfamilies/gra
+https://polishwordfamilies.netlify.app/.netlify/functions/api/wordfamilies/gra
+http://localhost:9000/.netlify/functions/api/wordfamilies/gra
 ```
 
 [ENG] The answer is:\
@@ -269,9 +284,9 @@ http://localhost:3000/wordfamilies/ukelele
 
 ```json
 {
-    "ukelele": [
+    "ukulele": [
         {
-            "prefix": "ukelele",
+            "prefix": "ukulele",
             "suffices": [
                 ""
             ]
